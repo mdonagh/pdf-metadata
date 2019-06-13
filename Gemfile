@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'puma', '~> 3.11'
 
 gem 'docraptor'
+gem 'pdf-reader'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -24,6 +25,7 @@ gem 'docraptor'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'pry'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
