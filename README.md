@@ -2,7 +2,11 @@
 
 This Ruby on Rails application takes URLs as URL parameters, convert them to PDF using Docraptor, write them to `/public`, then return metadata as JSON about the PDFs using doc-reader.
 
-App is deployed on Heroku at https://docraptor-challenge.herokuapp.com . Here's a sample URL you can use to test the JSON response `https://docraptor-challenge.herokuapp.com/pdf_metadata?urls[]=http://docraptor.com/examples/invoice.html&urls[]=https://www.nytimes.com&urls[]=https://news.ycombinator.com&urls[]=https://www.seattleweekly.com&urls[]=https://techcrunch.com/2019/06/14/microsoft-makes-getting-started-with-java-and-vs-code-easier`. Be patient though, this is a free tier Heroku dyno and those can take a few seconds to spin up. 
+App is deployed on Heroku at https://docraptor-challenge.herokuapp.com . Here's a sample URL you can use to test the JSON response: 
+
+`https://docraptor-challenge.herokuapp.com/pdf_metadata?urls[]=http://docraptor.com/examples/invoice.html&urls[]=https://www.nytimes.com&urls[]=https://news.ycombinator.com&urls[]=https://www.seattleweekly.com&urls[]=https://techcrunch.com/2019/06/14/microsoft-makes-getting-started-with-java-and-vs-code-easier`
+
+Be patient though, this is a free tier Heroku dyno and those can take a few seconds to spin up. 
 
 The main app logic lives in `app/services/metadata_processor_service.rb`.
 
