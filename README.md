@@ -1,6 +1,9 @@
 # Docraptor Coding Challenge
 
-This Ruby on Rails application takes URLs as URL parameters, convert them to PDF using Docraptor, write them to `/public`, then return metadata as JSON about the PDFs using doc-reader.
+This Ruby on Rails application takes URLs as URL parameters, convert them to PDF using Docraptor, write them to `/public`, then return metadata as JSON about the PDFs using doc-reader. 
+
+The coding challenge requirements are available here: 
+https://github.com/mdonagh/pdf-metadata/blob/master/Coding-Challenge.pdf
 
 App is deployed on Heroku at https://docraptor-challenge.herokuapp.com . Here's a sample URL you can use to test the JSON response: 
 
@@ -18,5 +21,3 @@ API flow:
 5) PDF metadata is read by the `doc-reader` gem
 6) PDF metadata is sorted by page length and alphabetically by URL
 7) PDF metadata is returned as JSON
-
-It might be possible to speed up the API response by providing the Docraptor responses directly to `doc-reader` and not reading or writing them to disk, but this might 
