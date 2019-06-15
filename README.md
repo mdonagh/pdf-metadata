@@ -21,5 +21,3 @@ API flow:
 5) PDF metadata is read by the `doc-reader` gem
 6) PDF metadata is sorted by page length and alphabetically by URL
 7) PDF metadata is returned as JSON
-
-Todo: expand test coverage. 
