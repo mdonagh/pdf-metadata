@@ -11,18 +11,15 @@ class MetadataProcessorService
     Dir.mkdir(Rails.root.join('public', @folder_name))
     create_pdfs
     collect_metadata
-    sort_response
+    sort_metadata
   end
 
-  def sort_response
+  def sort_metadata
     @pdf_metadata.sort_by! { |metadata| [metadata['page_count'], metadata['url']] }
   end
 
   def create_pdfs
     @doc_urls.each do |doc_url|
-      puts 'cat'
-      puts doc_url
-      puts 'donkey'
     docraptor_response = $docraptor.create_doc(
       test:             true,
       document_url:     doc_url,
@@ -44,7 +41,6 @@ class MetadataProcessorService
     @doc_urls.each do |url|
       read_pdf(url)
     end
-    puts @pdf_metadata
   end
 
   def read_pdf(url)
