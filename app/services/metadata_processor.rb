@@ -1,7 +1,7 @@
 class MetadataProcessor
+  attr_reader :pdf_metadata
   def initialize(doc_urls)
     @doc_urls = doc_urls
-    
     @pdf_metadata = []
     @folder_name = Time
                      .now
@@ -11,10 +11,6 @@ class MetadataProcessor
     create_pdfs
     collect_metadata
     sort_response
-  end
-
-  def get_metadata
-    @pdf_metadata
   end
 
   def sort_response
