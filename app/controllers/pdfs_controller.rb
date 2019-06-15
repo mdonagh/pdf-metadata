@@ -1,7 +1,7 @@
 class PdfsController < ApplicationController
   def show_metadata
     return render json: {}, status: 422 if invalid_urls?(params[:urls])
-    metadata_processor = MetadataProcessor.new(params[:urls])
+    metadata_processor = MetadataProcessorService.new(params[:urls])
     render :json => metadata_processor.pdf_metadata
   end
 
